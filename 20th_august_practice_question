@@ -1,0 +1,2333 @@
+# %% [markdown]
+#  Topic:- String  Based Assignment Problem 
+
+# %%
+# 1) Program to reverse a string 
+print("enter a string")# to show message to the user 
+s=input()# to take inut from user 
+s1=s[::-1]#to reverse the string 
+print("reverse of given string",s1)# to show the result of the program 
+
+# %%
+#2) to check a string is palindrome or not
+print("enter a string") # to show message
+s1=input()
+s2=s1[::-1] #to reverse the string  
+
+if s1==s2:#to check equality 
+    print('Yes it is palindrome') # to print if yes 
+else:
+    print('No it is not palindrome') # to print if no
+
+# %%
+#3) To change a string in upper case 
+print("Enter a String ")# to show massege to the user
+S=input()# to ask input 
+S1=str.upper(S)# to change in upper case 
+print("given data in upper case",S1)# to print result 
+
+
+# %%
+#4) To change a string in lower case 
+print("Enter a String ")# to show massege to the user 
+S=input()# t ask the user 
+S1=str.lower(S)# t change in lower case
+print("given data in lower case",S1)# to show result as output
+
+
+# %%
+# 5) To count the number of vowels in a sentence
+print("enter a sentence ") # to show message to the user
+a=input() # to ask input 
+b=str.upper(a) # to change all letter to capital letter
+vowels="AEIOU"
+count = sum(b.count(vowel) for vowel in vowels) #counting number of vowels from the user input string
+print("Number of vowels in the given sentence is ",count) # to show the result as output
+
+
+# %%
+# 6) to print number of consonants in the string
+print("enter a sentence ") # to show message to the user
+a=input()# to ask input 
+a1=a.replace(' ','') # to remove all spaces between the string 
+b=str.upper(a) # to change all letter to capital letter
+vowels="AEIOU"
+count = sum(b.count(vowel) for vowel in vowels) #counting number of vowels from the user input string
+print("Number of consonant in the given sentence is ",[len(a1)-count]) # to show the result as output
+
+
+# %%
+# 7) to remove all whitespaces from a string
+print("enter a string") #to show message 
+s=input() #to take input
+s1=s.replace(" ","") # to process the operation
+print("original String =",s) # to show result
+print("modified String = ",s1) # to show result
+
+# %%
+#8) to find the length of a string without using len() function
+print("enter a string")# to show messege to the user 
+s=input()# to ask user input 
+count=0#to count 
+for i in s:# for loop 
+    count=count+1
+print(count)# to print result as output 
+
+# %%
+#9) to check wheather a specific word is present in a string
+print("enter a string")# to show message to user 
+s=input()# to take input 
+print ("now enter a word whose availibilty to be checked ")# to show massege
+s1=input()# to take input 
+if s1 in s:# if condition used to show desired result 
+    print("yes","*"+s1+"*","is present in","<"+s+'>') 
+else:
+     print("not present")# result 
+
+# %%
+# 10) to replace a word in string to another word
+print("enter a string")# to show massege 
+a = input()# to ask input from user
+print ("enter the word you want to replace")
+a1 = input()
+print("enter the word use want to use instead of above word")
+a2 = input()
+print("replaced word :-",a.replace(a1,a2))# to replace the word 
+
+
+# %%
+# 11) to Count the occurrences of a word in a string
+print("enter a world or a Sentence ") # to give message to the user
+s=input()# to take input from user 
+print("select and enter the word to count in the string ")# to give message to the user 
+s2 = input()# to ask input 
+s1=s.split()# to split each word in a list
+s3=s1.count(s2)#to count the repeating word
+print("The number of", "(",s2,")","in ",s,"=",s3) # message to result as output
+
+# %%
+#12) Find the first occurrence of a word in a string.
+print("enter a string") # to give message to the user to enter the string 
+a=input()# to ask input from user 
+s1=a.split()# to split all words of sentence in list
+s2=s1[0]#to find the first word of the string 
+print("the first word of the string is :-",s2)# to give result as output
+
+
+# %%
+#13) Find the last occurrence of a word in a string.
+print("enter a string") # to give message to the user to enter the string 
+a=input()# to ask input from user 
+s1=a.split()# to split all words of sentence in list
+s3=len(s1)
+s2=s1[s3-1]#to find the last word of the string 
+print("the last word of the string is :-",s2)# to give result as output
+
+
+# %%
+#14. Split a string into a list of words.
+print("enter a string ")# to show  maseesge 
+a=input()# to take input from user 
+print("the list of all words of the sentence is  ",a.split())# to ask input from the user 
+
+# %%
+#15. Join a list of words into a string.
+word_list = ["Hello", "World", "Python", "Programming"]
+
+# Join the words into a single string using a space as a separator
+result_string = " ".join(word_list)
+
+# Print the result
+print(result_string)
+
+
+# %%
+#16. Convert a string where words are separated by spaces to one where words are separated by underscores.
+print("enter a string with underscores ")# to show result 
+a=input()# to ask input 
+print("the result :-",a.replace('_'," ")) # to replace _ with space")
+
+
+
+# %%
+#17. Check if a string starts with a specific word or phrase.
+print("enter a string ")# to give message to the user to enter the string 
+a=input()# to ask input from user 
+print("enter the word you want to check if it start with ")# to give message to the user to enter the string 
+a1=input()# to ask input from user 
+a2=a.split()# to split the string
+a3=a2[0]# to check the index of the string
+if a3==a1:# to check if the word start with given word
+    print("yes it satrt with ",a1)
+else:#else statement to print default message if the condtion gets false 
+    print("no it does not start with ",a1)# message to tell to the user 
+
+# %%
+#18. Check if a string ends with a specific word or phrase
+print("enter a string ")# to give message to the user to enter the string 
+a=input()# To take input from user
+print("enter the word you want to check if it ends with ")# to give message to the user to enter the string 
+a1=input()# To take input from user
+a2=a.split()
+a4=len(a2)
+a5=a4-1
+a3=a2[a5]
+if a3==a1:
+    print("yes it ends with ",a1)# to give message to the user
+else:
+    print("no it does not end with ",a1)
+
+# %%
+#19. Convert a string to title case (e.g., "hello world" to "Hello World").
+print("enter a string ")# to give message to the user to enter the string 
+a=input()# To take input from user
+print("the result:-",a.title())
+
+
+# %%
+#20. to find the longest word in a string 
+s=str(input("enter the string" ))# to give message to the user to enter the string 
+l=0
+w=''
+for i in s.split():
+    if(len(i)>l):
+        l=len(i)
+        w=i
+print("longest word is ",w)
+
+
+
+
+# %%
+#21. to find the shortest word in a string 
+s=str(input("enter the string" ))# to give message to the user to enter the string 
+w= min(s.split(),key=len)
+print("Shortest word is :",w)
+
+
+# %%
+#22. to reverse the order of the string 
+s= str(input("enter the string "))# to give message to the user to enter the string 
+s1 = s.split()
+s3=s1[::-1]
+print(s3)
+
+# %%
+#23. check if a string is alphanumberic.
+s= str(input("enter the string "))# to give message to the user to enter the string 
+s1=s.isalnum()
+if (s1==True):
+    print("yes it is alphanumeric")
+
+else:    
+    print("not alphanumeric")    
+
+# %%
+#24. extract all digit from a string 
+s=str(input("enter the string "))# to give message to the user to enter the string 
+s1=''
+for i in s:
+    if i.isdigit():
+        s1=s1+i
+print("extracted number from the list is :",s1)
+
+# %%
+#25. extract all alphabets from a string 
+s=str(input("enter the string "))# to give message to the user to enter the string 
+s1=''
+for i in s:
+    if i.isalpha():
+        s1=s1+i
+print("extracted alphabets from the list :",s1)
+
+# %%
+#26. to count  the number of upercase leter in a string 
+s=str(input("enter the string "))# to give message to the user to enter the string 
+s1=0
+for i in s :
+    if i.isupper():
+        s1=s1+1
+print("Number of uppercase letter :",s1)
+
+# %%
+#27. to count the number of lowercase letter in string 
+s=str(input("enter the string "))# to give message to the user to enter the string 
+s1=0
+for i in s :
+    if i.islower():
+        s1=s1+1
+print("Number of lowercase letter :",s1)
+
+# %%
+#28. to swap the case of each character 
+s=str(input("enter the string "))# to give message to the user to enter the string 
+x=s.swapcase()
+print("the result is :",x)
+
+# %%
+#29. to remove a specific word from a string 
+s=str(input("enter a string"))
+s1=s.split()
+
+x=str(input("enter the word you want to remove"))# to give message to the user to enter the string 
+status = False
+
+for i in s1:
+    if i==x:
+        s1.remove(i)
+        status = True
+
+if status:
+    s= ' '.join(s1)
+    print('String after deletion:',s)
+else:
+    print('Word not present in string.')
+
+
+# %%
+#30. to check if a string is a valid email address
+s=str(input("enter a string "))# to give message to the user to enter the string 
+s2=s.find('@')
+if (s2==-1):
+    print("it is not valid email")
+else:
+    print("it is a valid email")
+
+
+# %%
+#31. extract the username from an email address string
+def extract_username(email):
+    # Split the email address at the "@" symbol
+    parts = email.split("@")
+    
+    # Check if there are exactly two parts (username and domain)
+    if len(parts) == 2:
+        return parts[0]  # The username is the first part
+    else:
+        return None  # Invalid email format
+
+# Example usage:
+email_address = "john.doe@example.com"
+username = extract_username(email_address)
+
+if username:
+    print(f"The username is: {username}")
+else:
+    print("Invalid email address format.")
+
+
+# %%
+#32. extract the domain name from an email address string
+def extract_domain(email):
+    # Split the email address at the "@" symbol
+    parts = email.split("@")
+
+    # Check if there are exactly two parts (username and domain)
+    if len(parts) == 2:
+        return parts[1]  # The domain is the second part
+    else:
+        return None  # Invalid email format
+
+# Example usage:
+email_address = "john.doe@example.com"
+domain = extract_domain(email_address)
+
+if domain:
+    print(f"The domain name is: {domain}")
+else:
+    print("Invalid email address format.")
+
+
+# %%
+#33. replace multiple spaces in a string with a single space
+def replace_multiple_spaces(input_string):
+    # Split the string by spaces and join it with a single space
+    return ' '.join(input_string.split())
+
+# Example usage:
+original_string = "This   is    a  string   with   multiple   spaces."
+result = replace_multiple_spaces(original_string)
+print(result)
+
+
+# %%
+#34. check if a string is a valid URL
+from urllib.parse import urlparse
+
+def is_valid_url(url):
+    try:
+        result = urlparse(url)
+        # Check if the scheme and netloc (domain) parts are not empty
+        return all([result.scheme, result.netloc])
+    except ValueError:
+        return False
+
+# Example usage:
+url = "https://www.example.com"
+if is_valid_url(url):
+    print(f"{url} is a valid URL.")
+else:
+    print(f"{url} is not a valid URL.")
+
+
+# %%
+#35. extract the protocol (http or https) from a URL string
+from urllib.parse import urlparse
+
+def extract_protocol(url):
+    try:
+        result = urlparse(url)
+        return result.scheme.lower()  # Extract and convert to lowercase
+    except ValueError:
+        return None  # Return None for invalid URLs
+
+# Example usage:
+url = "https://www.example.com"
+protocol = extract_protocol(url)
+
+if protocol:
+    print(f"The protocol in the URL is: {protocol}")
+else:
+    print("Invalid URL or no protocol found.")
+
+
+# %%
+#36. Find the frequency of each character in a string 
+def character_frequency(input_string):
+    # Initialize an empty dictionary to store the character frequencies
+    frequency = {}
+
+    # Iterate through the characters in the input string
+    for char in input_string:
+        # Check if the character is a valid key in the dictionary
+        if char in frequency:
+            # If the character exists in the dictionary, increment its count
+            frequency[char] += 1
+        else:
+            # If the character is not in the dictionary, add it with a count of 1
+            frequency[char] = 1
+
+    return frequency
+
+# Example usage:
+input_string = "hello, world!"
+result = character_frequency(input_string)
+
+# Print the character frequencies
+for char, count in result.items():
+    if char.isprintable():  # Filter out non-printable characters
+        print(f"'{char}': {count}")
+
+
+# %%
+#37 remove all the punctuation from a string 
+import string
+
+def remove_punctuation(input_string):
+    # Create a translation table that maps punctuation characters to None
+    translator = str.maketrans('', '', string.punctuation)
+
+    # Use the translation table to remove punctuation
+    clean_string = input_string.translate(translator)
+
+    return clean_string
+
+# Example usage:
+input_string = "Hello, World! This is an example string with punctuation."
+result = remove_punctuation(input_string)
+
+print(result)
+
+
+# %%
+#38 check a string contains only digits 
+s = input("enter a string ")# to give message to the user to enter the string 
+l=list(s)# to chnage string to list
+for char in l:# for loop 
+    if char.isdigit():# to check the character 
+        print("yes this string contains digit")# to give result
+    break # break statement
+    else :# else statement to print dfault massage
+        print("no it does not contains a digit ")# to give result
+            
+    
+
+# %%
+#39. Check if a string contains only alphabets.
+s=input("enter the string")
+l=[]
+for i in s :
+    if i.isalpha()==True :
+           l.append(i)
+if l==list(s):
+    print("yes this string only contains alphabets")
+else :
+    print("this string doesnt conatins only and only aphabets")
+     
+
+# %%
+#40. Convert a string to a list of characters.
+s = str(input("enter the string to convert into list of character"))
+l=list(s)
+print("the given string is now converted into list of character=",l)
+
+
+# %%
+#41. Check if two strings are anagrams.
+def are_anagrams(str1, str2):
+    # Remove spaces and convert both strings to lowercase
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+
+    # Check if the lengths of the two strings are different
+    if len(str1) != len(str2):
+        return False
+
+    # Create dictionaries to count character occurrences
+    char_count1 = {}
+    char_count2 = {}
+
+    # Count character occurrences in the first string
+    for char in str1:
+        if char in char_count1:
+            char_count1[char] += 1
+        else:
+            char_count1[char] = 1
+
+    # Count character occurrences in the second string
+    for char in str2:
+        if char in char_count2:
+            char_count2[char] += 1
+        else:
+            char_count2[char] = 1
+
+    # Compare the character counts in both dictionaries
+    return char_count1 == char_count2
+
+# Example usage:
+str1 = "listen"
+str2 = "silent"
+result = are_anagrams(str1, str2)
+if result:
+    print(f"{str1} and {str2} are anagrams.")
+else:
+    print(f"{str1} and {str2} are not anagrams.")
+
+
+# %%
+#42. Encode a string using a Caesar cipher
+def caesar_cipher(text, shift):
+    encoded_text = ""
+    for char in text:
+        if char.isalpha():  # Check if the character is a letter
+            is_upper = char.isupper()  # Check if the character is uppercase
+            char = char.lower()  # Convert to lowercase for easier manipulation
+            shifted_char = chr(((ord(char) - ord('a') + shift) % 26) + ord('a'))
+            if is_upper:
+                shifted_char = shifted_char.upper()  # Convert back to uppercase if it was uppercase
+            encoded_text += shifted_char
+        else:
+            encoded_text += char  # Keep non-alphabet characters as they are
+    return encoded_text
+
+# Example usage:
+original_text = "Hello, World!"
+shift = 3
+encoded_text = caesar_cipher(original_text, shift)
+print("Original text:", original_text)
+print("Encoded text:", encoded_text)
+
+
+# %%
+#43. Decode a Caesar cipher encoded string
+def caesar_decipher(encoded_text, shift):
+    decoded_text = ""
+    for char in encoded_text:
+        if char.isalpha():  # Check if the character is a letter
+            is_upper = char.isupper()  # Check if the character is uppercase
+            char = char.lower()  # Convert to lowercase for easier manipulation
+            shifted_char = chr(((ord(char) - ord('a') - shift) % 26) + ord('a'))
+            if is_upper:
+                shifted_char = shifted_char.upper()  # Convert back to uppercase if it was uppercase
+            decoded_text += shifted_char
+        else:
+            decoded_text += char  # Keep non-alphabet characters as they are
+    return decoded_text
+
+# Example usage:
+encoded_text = "Khoor, Zruog!"
+shift = 3
+decoded_text = caesar_decipher(encoded_text, shift)
+print("Encoded text:", encoded_text)
+print("Decoded text:", decoded_text)
+
+
+# %%
+#44. Find the most frequent word in a string.
+from collections import Counter
+import re
+
+def most_frequent_word(text):
+    # Tokenize the text into words (assuming words are separated by spaces and punctuation)
+    words = re.findall(r'\b\w+\b', text.lower())
+
+    # Count the frequency of each word
+    word_counts = Counter(words)
+
+    # Find the most common word
+    most_common_word, frequency = word_counts.most_common(1)[0]
+
+    return most_common_word, frequency
+
+# Example usage:
+text = "This is a sample sentence. The word 'is' may appear more frequently than others in this example. Is it true?"
+most_common_word, frequency = most_frequent_word(text)
+
+print(f"The most frequent word is '{most_common_word}' with a frequency of {frequency} times.")
+
+
+# %%
+#45. Find all unique words in a string
+import re
+
+def unique_words(text):
+    # Tokenize the text into words (assuming words are separated by spaces and punctuation)
+    words = re.findall(r'\b\w+\b', text.lower())
+
+    # Use a set to store unique words
+    unique_word_set = set(words)
+
+    return list(unique_word_set)
+
+# Example usage:
+text = "This is a sample sentence. This is a sample example."
+unique_words_list = unique_words(text)
+
+print("Unique words in the text:")
+for word in unique_words_list:
+    print(word)
+
+
+# %%
+#46. Count the number of syllables in a string.
+import re
+
+def count_syllables(word):
+    # Convert the word to lowercase for consistent counting
+    word = word.lower()
+    
+    # Remove any non-alphabet characters from the word
+    word = re.sub(r'[^a-z]', '', word)
+    
+    # Define a regular expression to match vowel sequences
+    vowels = re.compile(r'[aeiouy]+')
+    
+    # Use the regular expression to find all vowel sequences in the word
+    syllables = re.findall(vowels, word)
+    
+    # Return the count of syllables (number of vowel sequences)
+    return len(syllables)
+
+def count_syllables_in_text(text):
+    # Tokenize the text into words
+    words = re.findall(r'\b\w+\b', text)
+    
+    # Count syllables in each word and return the total count
+    total_syllables = sum(count_syllables(word) for word in words)
+    
+    return total_syllables
+
+# Example usage:
+text = "Hello, how are you doing today? This is a simple example."
+syllable_count = count_syllables_in_text(text)
+
+print(f"Total syllables in the text: {syllable_count}")
+
+
+# %%
+#47. Check if a string contains any special characters
+import re
+
+def contains_special_characters(text):
+    # Define a regular expression to match any character that is not a letter or a digit
+    special_char_pattern = re.compile(r'[^a-zA-Z0-9]')
+
+    # Search for the pattern in the text
+    match = special_char_pattern.search(text)
+
+    # If a match is found, the text contains special characters
+    return match is not None
+
+# Example usage:
+text1 = "This is a string without special characters."
+text2 = "This is a string with a $pecial character."
+
+if contains_special_characters(text1):
+    print("text1 contains special characters.")
+else:
+    print("text1 does not contain special characters.")
+
+if contains_special_characters(text2):
+    print("text2 contains special characters.")
+else:
+    print("text2 does not contain special characters.")
+
+
+# %%
+#48. Remove the nth word from a string.
+import re
+
+def remove_nth_word(text, n):
+    # Tokenize the text into words
+    words = re.findall(r'\b\w+\b', text)
+
+    # Check if the specified position (n) is within the valid range
+    if n >= 0 and n < len(words):
+        # Remove the nth word from the list of words
+        del words[n]
+
+        # Recreate the text by joining the remaining words
+        modified_text = ' '.join(words)
+
+        return modified_text
+    else:
+        # Return the original text if n is out of range
+        return text
+
+# Example usage:
+text = "This is a sample sentence. Please remove the fifth word."
+n = 5  # Remove the fifth word (0-based index)
+
+modified_text = remove_nth_word(text, n)
+print("Modified text:", modified_text)
+
+
+# %%
+#49. Insert a word at the nth position in a string
+import re
+
+def insert_word_at_nth_position(text, word, n):
+    # Tokenize the text into words
+    words = re.findall(r'\b\w+\b', text)
+
+    # Check if the specified position (n) is within the valid range
+    if n >= 0 and n <= len(words):
+        # Insert the new word at the nth position
+        words.insert(n, word)
+
+        # Recreate the text by joining the words with spaces
+        modified_text = ' '.join(words)
+
+        return modified_text
+    else:
+        # If n is out of range, return the original text
+        return text
+
+# Example usage:
+text = "This is a sample sentence. Please insert a word here."
+new_word = "new_word"
+n = 4  # Insert the new word at the fourth position (0-based index)
+
+modified_text = insert_word_at_nth_position(text, new_word, n)
+print("Modified text:", modified_text)
+
+
+# %%
+#50. Convert a CSV string to a list of lists.
+import csv
+from io import StringIO
+
+def csv_string_to_list(csv_string):
+    # Create a StringIO object to mimic a file-like object
+    csv_file = StringIO(csv_string)
+    
+    # Initialize a CSV reader
+    reader = csv.reader(csv_file)
+
+    # Convert the CSV data to a list of lists
+    data = [row for row in reader]
+
+    return data
+
+# Example usage:
+csv_string = """Name,Age,Location
+Alice,25,New York
+Bob,30,Los Angeles
+Charlie,22,San Francisco"""
+
+list_of_lists = csv_string_to_list(csv_string)
+for row in list_of_lists:
+    print(row)
+
+
+# %% [markdown]
+# List based practise problem:
+
+# %%
+#1. Create a list with integers from 1 to 10.
+i= "12345678910"
+l = list(i)
+print(l)
+
+# %%
+#2. Find the length of a list without using the `len()` function.
+l = [1,2,3,4,5,6,76,9]
+count = 0
+for i in l :
+    count+=1
+print("the length of the list = ",count)
+
+# %%
+#3. Append an element to the end of a list.
+l = [1,2,3,4,5,6,76,9]
+s= input("enter the element to add at the end of the list ")
+l.append(s)
+print(l)
+
+# %%
+#4. Insert an element at a specific index in a list.
+l = [1,2,3,4,5,6,76,9]
+s = input("enter the element to add ")
+i = int(input("enter the index at which you want to add "))
+l.insert(i,s)
+print("the element is added in the list =",l)
+
+# %%
+#5. Remove an element from a list by its value
+l = [1,2,3,4,5,6,76,9]
+e= int(input("l = [1,2,3,4,5,6,76,9] select the element you want to remove"))
+l.remove(e)
+print(l,"this is the list after the element is removed ")
+
+# %%
+#6. Remove an element from a list by its index.
+l = [1,2,3,4,5,6,76,9]
+e= int(input("l = [1,2,3,4,5,6,76,9] enter  the index of the you want to remove"))
+l.pop(e)
+print(l,"this is the list after the element is removed ")
+
+# %%
+#7 Check if an element exists in a list.
+l= list(str(input("enter the element without seperated by any kind of seperator")))
+s= input("enter  the element you want to check if it is present in list you want to")
+if s in l :
+    print("yes this element is present in ",l)
+else :
+    print(" no this element",s," is not present in ",l)
+
+# %%
+#8. Find the index of the first occurrence of an element in a list.
+l = list(input("Enter the list"))
+print("the index of the  first occurence of element in list :=",l.index(l[0]))
+
+# %%
+#9. Count the occurrences of an element in a list.
+l = list(input("enter the elements of the list "))
+count=0
+for i in l:
+    count+=1
+print(" the number of elements in the list is  :=",count)
+
+# %%
+#10. Reverse the order of elements in a list.
+l = list(input("Enter the elements in list "))
+r = l[::-1]
+print("reverse order :=",r)
+
+# %%
+#11. Sort a list in ascending order.
+l = list(input("Enter the elements in the list"))
+l.sort()
+print("the sorted list in ascending order is :=",l)
+
+# %%
+#12. Sort a list in descending order.
+l = list(input("Enter the elements in the list"))
+l.sort()
+r =l[::-1]
+print("the sorted list in decending order is :=",r)
+
+# %%
+#13. Create a list of even numbers from 1 to 20.
+l=[]
+for i in range(1,21):
+    if i%2==0:
+        l.append(i)
+print("all the even from 1 to 20 :=",l)
+
+# %%
+#14. Create a list of odd numbers from 1 to 20.
+l=[]
+for i in range(1,21):
+    if i%2!=0:
+        l.append(i)
+print("all the odd from 1 to 20 :=",l)
+
+# %%
+#15. Find the sum of all elements in a list.
+l = input("enter the number in the list to find the sum ")
+r = list(l)
+ad = 0
+for i in r:
+    ad+=int(i)
+    
+print("sum of all the elements:=",ad)
+
+# %%
+#16. Find the maximum value in a list.
+l = list(input("Enter the element of list "))
+l.sort()
+r=len(l)-1
+print("the maximum value in the list is :=",l[r])
+
+# %%
+#17. Find the minimum value in a list.
+l = list(input("Enter the element of list "))
+l.sort()
+print("the maximum value in the list is :=",l[0])
+
+# %%
+#18. Create a list of squares of numbers from 1 to 10.
+l=[]
+for i in range(1,11):
+    i=i**2
+    l.append(i)
+print("the square of numbers from 1 to 10 ",l)
+
+# %%
+import random
+
+def generate_random_numbers(n, min_value, max_value):
+    random_numbers = [random.randint(min_value, max_value) for _ in range(n)]
+    return random_numbers
+n = 10 
+min_value = 1  
+max_value = 100 
+
+random_numbers = generate_random_numbers(n, min_value, max_value)
+print("Random Numbers:", random_numbers)
+
+
+# %%
+#20. Remove duplicates from a list.
+l = list(input("enter the elements in the list"))
+nl=[]
+for i in l:
+    if i not in nl:
+        nl.append(i)
+print("the unique elements in the list ",nl)
+
+# %%
+#21. Find the common elements between two lists.
+l1 = tuple(input("Enter the elements in list1 "))
+l2 = tuple(input("Enter the elements of list 2"))
+l3 =[]
+for i in l1:
+    if i in l2:
+        if i not in l3:
+            l3.append(i)
+l3.sort()
+print("the common in both list is =:",l3)
+
+# %%
+#22. Find the difference between two lists.
+l1 = list(input("Enter the elements in list1 "))
+l2 = list(input("Enter the elements of list 2"))
+l3= list(set(l1) ^ set(l2))
+l3.sort()
+print("the difference in both list is =:",l3)
+
+# %%
+#23. Merge two lists.
+l1 = list(input("Enter the elements in list1 "))
+l2 = list(input("Enter the elements of list 2"))
+for i in l2 :
+    l1.append(i)
+print("the merged list is :=",l1)
+
+# %%
+#24. Multiply all elements in a list by 2.
+l1 = list(input("Enter the elements in list "))
+l2= []
+for i in l1:
+    m=int(i)*2
+    l2.append(m)
+print("the list of elements multiplied by 2:=",l2)
+
+# %%
+#25. Filter out all even numbers from a list.
+l1 = list(input("Enter the elements in list "))
+l2=[]
+for i in l1:
+    if int(i)%2==0:
+        l2.append(i)
+print("all filtered even numbers from the list :=",l2)
+
+# %%
+#26. Convert a list of strings to a list of integers.
+l1 = list(input("Enter the elements in list "))
+l2 = []
+for i in l1:
+    i = int(i)
+    l2.append(i)
+print("the converted string to integer :=",l2)
+print(type(i))
+
+# %%
+#27. Convert a list of integers to a list of strings.
+l1 =input("Enter the elements in list ")
+l2=[]
+for i in l1:
+    i = int(i)
+    l2.append(i)
+print("the converted string to integer :=",l2)
+print(type(i))
+l3=[]
+for i in l2:
+    i = str(i)
+    l3.append(i)
+print("the converted integer to string :=",l2)
+print(type(i))
+
+# %%
+#28. Flatten a nested list.
+def flatten_list(nested_list):
+    flattened = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flattened.extend(flatten_list(item))
+        else:
+            flattened.append(item)
+    return flattened
+
+# Example usage:
+nested_list = [1, [2, 3], [4, [5, 6]], 7]
+flattened_list = flatten_list(nested_list)
+print(flattened_list)
+# %%
+#29 create a list of ten fibonacci number(0,1,1,2,3,5,8,13)
+n1=0
+n2=1
+count = 0
+l = [0,]
+for i in range(1,11):
+        nth = n1+n2
+        n1 = n2 
+        n2 = nth 
+        count+=1
+        l.append(n1)
+print(l)
+
+
+# %%
+#30 check if the list is sorted
+l1 = list(input("Enter the elements in the list"))
+l2 = []
+for i in l1:
+    l2.append(i)
+l2.sort()
+if l1 == l2 :
+    print("yes this list is sorted ",l1)
+else :
+    print("this list is not sorted",l1)
+
+# %%
+#31. Rotate a list to the left by `n` positions.
+def rotate_left(lst, n):
+    if not lst:
+        return lst  
+    n = n % len(lst) 
+    return lst[n:] + lst[:n]
+
+# Example usage:
+my_list = [1, 2, 3, 4, 5]
+n = 2
+rotated_list = rotate_left(my_list, n)
+print(rotated_list) 
+
+
+
+# %%
+#32. Rotate a list to the right by `n` positions.
+def rotate_list_right(lst, n):
+    if not lst:
+        return lst 
+    n = n % len(lst)
+    return lst[-n:] + lst[:-n]
+
+my_list = [1, 2, 3, 4, 5]
+n = 2
+rotated_list = rotate_list_right(my_list, n)
+print(rotated_list)  
+
+
+# %%
+#33. Create a list of prime numbers up to 50.
+def is_prime(number):
+    if number <= 1:
+        return False
+    if number <= 3:
+        return True
+    if number % 2 == 0 or number % 3 == 0:
+        return False
+
+    i = 5
+    while i * i <= number:
+        if number % i == 0 or number % (i + 2) == 0:
+            return False
+        i += 6
+
+    return True
+
+# Create a list of prime numbers up to 50
+prime_numbers = [2, 3]  # Initialize with the first two prime numbers
+
+for num in range(5, 51, 2):  # Start checking odd numbers from 5 to 50
+    if is_prime(num):
+        prime_numbers.append(num)
+
+print(prime_numbers)
+
+
+
+
+
+# %%
+#34. Split a list into chunks of size `n`.
+def split_list(input_list, chunk_size):
+    for i in range(0, len(input_list), chunk_size):
+        yield input_list[i:i + chunk_size]
+
+# Example usage:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+chunk_size = 3
+
+for chunk in split_list(my_list, chunk_size):
+    print(chunk)
+
+
+
+# %%
+#35. Find the second largest number in a list.
+def find_second_largest(numbers):
+    if len(numbers) < 2:
+        return "The list should have at least two elements."
+
+    sorted_numbers = sorted(numbers)
+    return sorted_numbers[-2]
+
+# Example usage:
+my_list = [12, 45, 10, 6, 67, 99, 87, 54]
+second_largest = find_second_largest(my_list)
+print(f"The second largest number is: {second_largest}")
+
+
+# %%
+#36. Replace every element in a list with its square.
+l1 = input("enter the elements in list to get prpoer result please input only numbers ")
+s=map(lambda x : int(x)**2,l1)
+print(list(s))
+
+# %%
+#37. convert a list to a  dictonary where list elements become keys and their indices become value
+l1 = input("enter the elements in list ")
+my_dict = {value: index for index, value in enumerate(l1)}
+print(my_dict)
+
+# %%
+#38.shuffle the element of a list randomly.
+import random
+
+l1 = list(input("enter the elements in list to shuffle "))
+
+random.shuffle(l1)
+
+print(l1)
+
+
+# %%
+#39.Create a list of first 10 factorial number
+l1 = []
+pro = 1
+for i in range(0,11):
+    if i ==0 or i == 1 :
+        l1.append(1)
+    else :
+        pro=pro*i
+        l1.append(pro)
+print(l1)
+
+# %%
+#40. check if two list have atleast one element common.
+l1 = list(input("enter the elements of list 1"))
+l2 = list(input("enter the elements of list 2"))
+for i in l1 :
+    if i in l2:
+        print(f"yes atleast one element is common in both list")
+        break
+    else:
+        print("nothing is common both list ")
+        break
+
+
+# %%
+#41.remove all elements from the list 
+l1 = list(input("enter the elements of list 1"))
+print("you have given a list ",l1)
+l1.clear()
+print("your given data is removed from the list",l1)
+
+# %%
+#41. replace negative numbers with zero 
+l1 =input("enter the elements in list seperated by comma ")
+n=l1.split(',')
+l3=[]
+for i in n:
+    if int(i) <0:
+        l3.append(0)
+    else :
+        l3.append(i)
+print(f"original list{n} ")
+print(f"the negative numbers  is replaced with zero{l3}")
+
+# %%
+#43. convert a string into list of words 
+s=input("enter the string ")
+word = s.split()
+print(f"the original string is {s}")
+print(f"the modified list is {word}")
+
+
+# %%
+#44.convert a words into a string
+l = ''
+n = "start"
+while n!="stop":
+    n=input("enter the word to add in list and enter stop to submit the list")
+    if n=="stop":
+        break
+    else:
+        l=l+n
+print(l)
+        
+
+
+
+# %%
+#45. create a list of first 'n' powers of 2
+l = int(input("Enter the number upto which you want to power of 2"))
+l1=[]
+for i in range(l+1) :
+    p=2**int(i)
+    l1.append(f"2^{i}={p}")
+print(l1)
+
+
+# %%
+#46.find the longest string in a list of string
+l1 = input("enter the string of the list ")
+l= l1.split(' ')
+ls= l[0]
+for i in l :
+    if len(i)>len(ls):
+        ls = i
+print(ls)
+
+
+# %%
+#47. Find the shortest string in a list of strings.
+l1 = input("enter the string of the list ")
+l= l1.split(' ')
+ls= l[0]
+for i in l :
+    if len(i)<len(ls):
+        ls = i
+print(ls)
+
+# %%
+#48. Create a list of the first `n` triangular numbers.
+def generate_triangular_numbers(n):
+    triangular_numbers = []
+    for i in range(1, n + 1):
+        tn = (i * (i + 1)) // 2 
+        triangular_numbers.append(tn)
+
+    return triangular_numbers
+
+n = int(input("Enter the value of n: "))
+
+triangular_numbers_list = generate_triangular_numbers(n)
+
+print("List of the first", n, "triangular numbers:", triangular_numbers_list)
+
+
+# %%
+#49. Check if a list contains another list as a subsequence.
+def is_subsequence(subsequence, sequence):
+    i, j = 0, 0
+
+    while i < len(subsequence) and j < len(sequence):
+        if subsequence[i] == sequence[j]:
+            i += 1
+        j += 1
+
+    return i == len(subsequence)
+
+
+sequence = [1, 2, 3, 4, 5, 6, 7, 8]
+subsequence = [2, 4, 6]
+
+if is_subsequence(subsequence, sequence):
+    print("The subsequence is present in the sequence.")
+else:
+    print("The subsequence is not present in the sequence.")
+
+
+# %%
+#50. Swap two elements in a list by their indices.
+def swap_elements_by_indices(lst, index1, index2):
+    # Check if the indices are valid
+    if 0 <= index1 < len(lst) and 0 <= index2 < len(lst):
+        temp = lst[index1]
+        lst[index1] = lst[index2]
+        lst[index2] = temp
+    else:
+        print("Invalid indices")
+my_list = [1, 2, 3, 4, 5]
+
+index1 = 1
+index2 = 3
+
+print("Original list:", my_list)
+swap_elements_by_indices(my_list, index1, index2)
+print("List after swapping elements at indices", index1, "and", index2, ":", my_list)
+
+
+# %% [markdown]
+# 
+
+# %% [markdown]
+# Tuple Based Practice Problem
+
+# %%
+#1. Create a tuple with integers from 1 to 5.
+t = (1,2,3,4,5)
+print(type(t),t)
+
+
+# %%
+#2. Access the third element of a tuple.
+t = tuple(input("Enter the elements in the tuple" ))
+print("The index of third elements in the tuple is ",t[2])
+
+# %%
+#3. Find the length of a tuple without using the `len()` function.
+t = tuple(input("Enter the elements in tuple"))
+c=0
+for i in t :
+    c+=1
+print(f"the length of the tuple is {c} and the data type is = {type(t)}" ) 
+
+# %%
+#4. Count the occurrences of an element in a tuple.
+t = tuple(input("Enter the elements in the tuple "))
+t1 = input("enter the element to check its occurence in tuple ")
+c= 0
+for i in t :
+    if i ==t1:
+        c+=1
+print(f"the element {t1} occurs in the tuple is {c} times and the tuple is {t} ")
+
+# %%
+#5. Find the index of the first occurrence of an element in a tuple.
+t = tuple(input("Enter the elements in the tuple "))
+for i in t:
+    c=t.index(i)
+    print(c)
+    break
+
+# %%
+#6. Check if an element exists in a tuple.
+t = tuple(input("Enter the elements in the tuple "))
+e = input("Enter the element whose availiblity you want to check ")
+if e in t :
+    print(f"yes element {e} is present in the given tuple {t} ")
+else:
+    print("the given element {e} is not present in given tuple {t}")
+
+# %%
+#7. Convert a tuple to a list.
+t = tuple(input("Enter the elements in the tuple "))
+print(f"the given data {t} is of data type{type(t)}")
+l = []
+for i in t :
+    l.append(i)
+print(f"the given tuple is now converted in to a list {l} {type(l)}")
+
+
+
+# %%
+#8. Convert a list to a tuple.
+l = list(input("Enter the elements in the tuple "))
+print(f"the given data {l} is of data type{type(l)}")
+t=tuple(l)
+print(f"the given list is now converted in to a tuple {t} {type(t)}")
+
+
+# %%
+#9. Unpack the elements of a tuple into variables.
+t = (1,2,3)
+
+var1,var2,var3 = t
+print("Unpack variables :")
+print("var1:",var1)
+print("var2:",var2)
+print("var3:",var3)
+
+# %%
+#10. Create a tuple of even numbers from 1 to 10.
+t = ()
+for i in range(1,11):
+    if int(i)%2==0:
+        t = t+(i,)
+print(f"the tuple of even number from 1 to 10 is {t} and data type of given number is {type(t)}")
+
+
+# %%
+#11. Create a tuple of odd numbers from 1 to 10.
+t = ()
+for i in range(1,11):
+    if int(i)%2!=0:
+        t = t+(i,)
+print(f"the tuple of odd number from 1 to 10 is {t} and data type of given number is {type(t)}")
+
+
+# %%
+#12. Concatenate two tuples.
+t = (1,2,3)
+t1= (4,5,6)
+t = t+t1
+print(f"the concatenate of both tuple is {t}")
+
+# %%
+#13. Repeat a tuple three times.
+t = tuple(input("Enter the elements in the tuple "))
+for i in range(1,4):
+    print(t)
+    
+
+# %%
+#14. Check if a tuple is empty.
+t = tuple(input("Enter the elements in tuple"))
+t1 = ()
+if t == t1:
+    print("the given tuple is empty")
+else :
+    print(f"the given tuple contains some elements in it and the element is {t}")
+
+# %%
+#15. Create a nested tuple.
+t = (1,2,3,4,5,6,(4,5,6,(7,8,9)))
+print(t)
+
+# %%
+#16. Access the first element of a nested tuple.
+t = ((1,2,3,4),(5,6,7),(8,9,10))
+a = t[0][0]
+print(a)
+
+# %%
+#17. Create a tuple with a single element.
+t = tuple(input("Enter only one element "))
+print(f"the single element{t} is of data type {type(t)}")
+
+# %%
+#18. Compare two tuples.
+t1 = tuple(input("Enter the element in tuple 1 "))
+t2 = tuple(input("Enter the element in tuple 2"))
+td=()
+for i in t1:
+    if i not in t2:
+        td = td+(i,)
+print(f"the difference between both tuple is {td}")
+print(f"the given tuple 1 is {t1} and the given tuple 2 is {t2}")
+
+
+
+# %%
+#19. Delete a tuple.
+l1 = tuple(input("Enter the elements in the tuple "))
+print(f"the given elements in the tuple is {l1}")
+del l1
+print(l1,"getting error as variable not defined means the variable that contains the tuple is deleted ")
+
+
+# %%
+#20. Slice a tuple.
+t  = (1,2,3,4,5,6,7,8,9)
+st = t[1:4]
+print("sliced tuple is = ",st)
+
+
+# %%
+#21. Find the maximum value in a tuple.
+t = tuple(input("Enter the elements in tuple"))
+mv = max(t)
+print(mv)
+
+# %%
+#22. Find the minimum value in a tuple.
+t = tuple(input("Enter the elements in tuple"))
+mv = min(t)
+print(mv)
+
+# %%
+#23. Convert a string to a tuple of characters.
+s = input("Enter the string")
+t = ()
+for i in s :
+    t = t+(i,)
+print(f"the given string {s} and data type{type(s)} is now converted into tuple {t} and the data type{type(t)}")
+    
+
+# %%
+#24. Convert a tuple of characters to a string.
+t = tuple(input("Enter the elements in tuple"))
+s =" "
+for i in t :
+    s = s+i
+print(f"the given tuple{t} and data type {type(t)} is now converted into string {s}and data type {type(s)}")
+    
+
+# %%
+#25. Create a tuple from multiple data types.
+ing =(input("enter the values integer type"))
+s = str(input("Enter the values in string type"))
+f = (input("Enter the value in float type"))
+t =()
+for i in ing:
+    t =t+(int(i),)
+for j in s :
+    t = t+(j,)
+for h in f:
+    t =t+(float(h),)
+print(t)
+
+# %%
+#26. Check if two tuples are identical.
+t1 = tuple(input("Enter the elements in tuple 1"))
+t2 = tuple(input("Enter the elements in tuple 2"))
+t3 =()
+for i in t1 :
+    if i not in t2 :
+        print("the given data in not identicle")
+        break
+    else:
+        t3 = t3+(i,)
+        print(f"the given data is identicle {t3}")
+
+# %%
+#27. Sort the elements of a tuple.
+t = tuple(input("Enter the elements in tuple"))
+l = list(t)
+l.sort()
+st = tuple(l)
+print(f"the sorted tuple is {st}")
+
+
+# %%
+#28. Convert a tuple of integers to a tuple of strings.
+t = 1234
+t1 =str(t) 
+print(f"the provided integer {t} data type {type(t)} tuple is now converted into string of tuple {t1} and its data type is {type(t1)}")
+
+# %%
+#29. Convert a tuple of strings to a tuple of integers.
+# Original tuple of strings
+tuple_of_strings = ("1", "2", "3", "4", "5")
+
+# Convert the tuple of strings to a tuple of integers
+tuple_of_integers = tuple(int(x) for x in tuple_of_strings)
+
+# Print the result
+print(tuple_of_integers)
+
+
+# %%
+#30. Merge two tuples.
+t1 = tuple(input("Enter the elements in tuple 1"))
+t2 = tuple (input("Enter the elements in the tuple 2 "))
+t3 = t1+t2
+print(t3 )
+
+# %%
+#31. Flatten a nested tuple.
+def flatten_tuple(nested_tuple):
+    flat_list = []
+    
+    for item in nested_tuple:
+        if isinstance(item, tuple):
+            flat_list.extend(flatten_tuple(item))
+        else:
+            flat_list.append(item)
+    
+    return tuple(flat_list)
+
+# Example usage:
+nested_tuple = ((1, 2), (3, (4, 5), 6), 7)
+flattened = flatten_tuple(nested_tuple)
+print(flattened)
+
+
+# %%
+#32. Create a tuple of the first 5 prime numbers.
+t = (1,2,3,5,7)
+print(t)
+
+# %%
+#33. Check if a tuple is a palindrome.
+t = tuple(input("Enter the element in tuple to"))
+t1 = t[::-1]
+if t == t1:
+    print("The tuple is a palindrome ")
+else :
+    print("The tuple is not a palindrome ")
+
+# %%
+#34. Create a tuple of squares of numbers from 1 to 5
+t = ()
+for i in range(1,6):
+    t = t+(i**2,)
+print(t)
+
+# %%
+#35. Filter out all even numbers from a tuple.
+t = tuple(input("Enter the elements in the tuple"))
+t1=()
+for i in t:
+    if int(i)%2==0:
+        t1=t1+(i,)
+print(t1)
+
+# %%
+#36. Multiply all elements in a tuple by 2.
+t = tuple(input("Enter the elements in the tuple"))
+t1 = ()
+for i in t :
+    t1 =t1+(int(i)*2,)
+print(t1)
+
+
+# %%
+#37. Create a tuple of random numbers.
+import random 
+start = 1
+end = 100
+norn = 5
+ranno= tuple(random.randint(start,end,) for _ in range(norn))
+print("tuple of random numbers : ",ranno)
+
+# %%
+#38. Check if a tuple is sorted.
+t = tuple(input("Enter the elements in the tuple "))
+l = []
+for i in t :
+    l.append(i)
+l.sort()
+l = tuple(l)
+print(l)
+
+# %%
+#39. Rotate a tuple to the left by `n` positions.
+def rotate_left_tuple(input_tuple, n):
+    if not input_tuple:
+        return input_tuple 
+    n = n % len(input_tuple)
+    return input_tuple[n:] + input_tuple[:n]
+
+# Example usage:
+my_tuple = (1, 2, 3, 4, 5)
+n = 2
+rotated_tuple = rotate_left_tuple(my_tuple, n)
+print(rotated_tuple) 
+
+# %%
+#40. Rotate a tuple to the right by `n` positions.
+def rotate_tuple_right(tup, n):
+    if not tup:
+        return tup  
+    n = n % len(tup)  
+    tup_list = list(tup)  
+    rotated_list = tup_list[-n:] + tup_list[:-n]  
+    return tuple(rotated_list) 
+
+# Example usage:
+my_tuple = (1, 2, 3, 4, 5)
+n = 2
+rotated_tuple = rotate_tuple_right(my_tuple, n)
+print(rotated_tuple)  
+
+
+# %%
+#41. Create a tuple of the first 5 Fibonacci numbers.
+def generate_fibonacci(n):
+    fib_sequence = [0, 1]   
+    while len(fib_sequence) < n:
+        next_number = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_number)
+    return tuple(fib_sequence)
+
+ 
+first_5_fibonacci = generate_fibonacci(5)
+print(first_5_fibonacci)
+
+
+# %%
+#42. Create a tuple from user input.
+t = tuple(input("Enter the elements in the tuple"))
+print(t)
+
+# %%
+#43. Swap two elements in a tuple.
+def swap_elements(tup, index1, index2):
+    tup_list = list(tup)
+    
+    # Check if the provided indices are within the bounds of the tuple
+    if 0 <= index1 < len(tup) and 0 <= index2 < len(tup):
+        # Swap the elements at the specified indices
+        tup_list[index1], tup_list[index2] = tup_list[index2], tup_list[index1]
+        
+        # Convert the list back to a tuple
+        swapped_tup = tuple(tup_list)
+        
+        return swapped_tup
+    else:
+        print("Invalid indices. Elements cannot be swapped.")
+        return None
+
+# Example usage
+original_tuple = (1, 2, 3, 4, 5)
+index1 = 1
+index2 = 3
+
+swapped_tuple = swap_elements(original_tuple, index1, index2)
+
+if swapped_tuple is not None:
+    print("Original Tuple:", original_tuple)
+    print("Swapped Tuple:", swapped_tuple)
+
+
+# %%
+#44. Reverse the elements of a tuple.
+def reverse_tuple(input_tuple):
+    reversed_tuple = input_tuple[::-1]
+    return reversed_tuple
+
+# Example usage:
+original_tuple = (1, 2, 3, 4, 5)
+reversed_result = reverse_tuple(original_tuple)
+print("Original Tuple:", original_tuple)
+print("Reversed Tuple:", reversed_result)
+
+
+# %%
+#45. Create a tuple of the first `n` powers of 2.
+t = input("Enter the number upto which you want the power of 2 in a tuple ")
+for  i in range(1,(int(t)+1)) :
+    t1=int(i)**2
+    print(f"{i}^2={t1}")
+
+# %%
+#46. Find the longest string in a tuple of strings.
+def find_longest_word(input_string):
+    words = input_string.split()
+    longest_word = ""
+    max_length = 0
+    for word in words:
+        if len(word) > max_length:
+            longest_word = word
+            max_length = len(word)
+
+    return longest_word
+
+# Example usage:
+input_string = "This is a sample sentence with some long words"
+longest_word = find_longest_word(input_string)
+print("Longest word in the string:", longest_word)
+
+
+# %%
+#47. Find the shortest string in a tuple of strings.
+def find_shortest_string(string_tuple):
+    # Initialize variables to store the shortest string and its length
+    shortest_string = None
+    min_length = float('inf')  # Set to positive infinity initially
+
+    # Iterate through the strings in the tuple
+    for string in string_tuple:
+        if len(string) < min_length:
+            shortest_string = string
+            min_length = len(string)
+
+    return shortest_string
+
+# Example usage:
+string_tuple = ("apple", "banana", "cherry", "date", "fig")
+shortest = find_shortest_string(string_tuple)
+print("Shortest string in the tuple:", shortest)
+
+
+# %%
+#48. Create a tuple of the first `n` triangular numbers.
+def generate_triangular_numbers(n):
+    triangular_numbers = tuple((i * (i + 1)) // 2 for i in range(1, n + 1))
+    return triangular_numbers
+
+# Example usage:
+n = 5  # Change this to the number of triangular numbers you want
+triangular_numbers_tuple = generate_triangular_numbers(n)
+print("Tuple of the first", n, "triangular numbers:", triangular_numbers_tuple)
+
+
+# %%
+#49. Check if a tuple contains another tuple as a subsequence.
+def is_subsequence(sub, main):
+    if not sub:
+        return True
+
+    if not main:
+        return False
+
+    sub_index = 0
+    for item in main:
+        if item == sub[sub_index]:
+            sub_index += 1
+            if sub_index == len(sub):
+                return True
+
+    return False
+
+# Example usage:
+main_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
+sub_tuple = (3, 4, 5)
+
+if is_subsequence(sub_tuple, main_tuple):
+    print("The sub_tuple is a subsequence of the main_tuple.")
+else:
+    print("The sub_tuple is not a subsequence of the main_tuple.")
+
+
+# %%
+#50. Create a tuple of alternating 1s and 0s of length `n`.
+def alternating_ones_and_zeros(n):
+    alternating_tuple = tuple(1 if i % 2 == 0 else 0 for i in range(n))
+    return alternating_tuple
+
+# Example usage:
+n = 10  # Change this to the desired length
+alternating_sequence = alternating_ones_and_zeros(n)
+print("Tuple of alternating 1s and 0s of length", n, ":", alternating_sequence)
+
+
+# %% [markdown]
+# SET BASED PRACTICE QUESTION
+
+# %%
+#1. Create a set with integers from 1 to 5.
+s1 = {1,2,3,4,5}
+print(type(s1),s1)
+
+# %%
+#2. Add an element to a set.
+s1 = {1,2,3,4,5}
+s1.add(6)
+print(s1)
+
+# %%
+#3. Remove an element from a set.
+s1 = {1,2,3,4,5}
+s1.remove(3)
+print(s1)
+
+# %%
+#4. Check if an element exists in a set.
+s1 = {1,2,3,4,5}
+n = int(input("Enter the number to check in the set"))
+if n in s1:
+    print(f"yes {n} is present in the set")
+else :
+    print(f"No {n} is not present in the set")
+
+# %%
+#5. Find the length of a set without using the `len()` function.
+s1 = set(input("Enter the elements in the set "))
+count = 0
+for i in s1:
+    count+=1
+print(f"The length of the set {count}")
+
+
+# %%
+#6. Clear all elements from a set.
+s = set(input("Enter the elements in the set"))
+print("The given set is ",s)
+print("the given set is clear now ",s.clear())
+
+# %%
+#7. Create a set of even numbers from 1 to 10.
+s = set()
+for i in range(1,11):
+    if int(i)%2==0:
+        s.add(i)
+print("Enter the even number from 1 to 10 is ",s)
+
+# %%
+#8. Create a set of odd numbers from 1 to 10.
+sa = set()
+for i in range(1,11):
+    if (int(i))%2!=0:
+        sa.add(i)
+print("Enter the odd number from 1 to 10",sa)
+
+# %%
+#9. Find the union of two sets.
+s1 = set(input("Enter the number of elements in set1 "))
+s2 = set(input("Enter the number of elements in set2 "))
+um = s1.union(s2)
+print(um)
+
+# %%
+#10. Find the intersection of two sets.
+s1 = set(input("Enter the number of elements in set1 "))
+s2 = set(input("Enter the number of elements in set2 "))
+um = s1 & s2
+print(um)
+
+# %%
+#11. Find the difference between two sets.
+s1 = set(input("Enter the elements in set 1 "))
+s2 = set(input("Enter the elements in set 2"))
+d = s1-s2
+print(d)
+
+# %%
+#12. Check if a set is a subset of another set.
+s1 = set(input("Enter the elements in set 1 "))
+s2 = set(input("Enter the elements in set 2"))
+sub = s1.issubset(s2)
+print(sub)
+
+# %%
+#13. Check if a set is a superset of another set.
+s1 = set(input("Enter the elements in set 1 "))
+s2 = set(input("Enter the elements in set 2"))
+is_superset = set1.issuperset(set2)
+print(is_superset)
+
+# %%
+#14. Create a set from a list.
+l = list(input("Enter a list"))
+print(l)
+s=set(l)
+print(s)
+
+# %%
+#15. Convert a set to a list.
+s = set(input("Enter the set"))
+print(s)
+l = list(s)
+print(l)
+
+
+
+# %%
+#16. Remove a random element from a set.
+s = set(input("Enter the set element"))
+re = s.pop()
+print("removed element :",re)
+print("updated set :",s)
+
+
+# %%
+#17. Pop an element from a set.
+s = set(input("Enter the set element"))
+re = s.pop()
+print("popped element :",re)
+print("updated set :",s)
+
+# %%
+#18. Check if two sets have no elements in common.
+set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+
+# Check if the sets have no common elements
+have_no_common_elements = set1.isdisjoint(set2)
+
+if have_no_common_elements:
+    print("The sets have no common elements.")
+else:
+    print("The sets have at least one common element.")
+
+
+# %%
+#19. Find the symmetric difference between two sets.
+s1 = set(input("Enter the elements in set 1 "))
+s2 = set(input("Enter the elements in set 2"))
+symmetric_diff = s1.symmetric_difference(s2)
+print(symmetric_diff)
+
+# %%
+#20. Update a set with elements from another set.
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+
+# Update set1 with elements from set2
+set1.update(set2)
+
+print(set1)  # set1 is now {1, 2, 3, 4, 5}
+
+
+# %%
+#21. Create a set of the first 5 prime numbers.
+set1 = {2,3,5,7,11}
+print("the first prime number is ",set1)
+
+# %%
+#22. Check if two sets are identical.
+set1= set(input("Enter the elements in set 1"))
+set2 = set(input("Enter the elements in set 2"))
+if set1 == set2 :
+    print("both are identical ")
+else :
+    print("not identical ")
+
+# %%
+#23. Create a frozen set.
+my_list = [1, 2, 3, 4, 5]
+my_frozen_set = frozenset(my_list)
+
+# Create a frozen set directly with elements
+my_frozen_set = frozenset({1, 2, 3, 4, 5})
+
+# Accessing elements of a frozen set
+for element in my_frozen_set:
+    print(element)
+
+
+# %%
+#24. Check if a set is disjoint with another set.
+set1 = set(input("enter the elements in set 1 "))
+set2 = set(input("Enter the elements in set 2 "))
+if set1.isdisjoint(set2) :
+    print("yes it is disjoint")
+else :
+    print("it is not disjoint")
+
+# %%
+#25. Create a set of squares of numbers from 1 to 5.
+set1 = {1,4,9,16,25}
+print("the square of the 1 to 5 is",set1)
+
+# %%
+#26. Filter out all even numbers from a set.
+set1 = set(input("Enter the elements in the set"))
+set2 = set()
+for i in set1:
+    if int(i)%2==0:
+        set2.add(i)
+print("the filtered even number is =",set2)
+
+# %%
+#27. Multiply all elements in a set by 2.
+set1 = set(input("Enter the elements in the set"))
+set2 = set()
+for i in set1:
+    p = int(i)*2
+    set2.add(p)
+    print(set1)
+    print(f"{i} * 2 = {p}")
+
+
+# %%
+#28. Create a set of random numbers.
+import random
+
+# Set the number of random elements you want
+num_elements = 10
+
+# Generate a set of random numbers
+random_set = set()
+
+while len(random_set) < num_elements:
+    random_set.add(random.randint(1, 100))  # Adjust the range as needed
+
+print("Random Set:", random_set)
+
+
+# %%
+#29. Check if a set is empty.
+my_set = set()
+
+if len(my_set) == 0:
+    print("The set is empty")
+else:
+    print("The set is not empty")
+
+
+# %%
+#30. Create a nested set (hint: use frozenset).
+# Create nested frozen sets
+nested_set = frozenset([
+    frozenset({1, 2, 3}),
+    frozenset({4, 5, 6}),
+    frozenset({7, 8, 9})
+])
+
+# Access elements in the nested sets
+for inner_set in nested_set:
+    for element in inner_set:
+        print(element)
+
+
+# %%
+#31. Remove an element from a set using the discard method.
+my_set = {1, 2, 3, 4, 5}
+
+# Remove an element using discard
+my_set.discard(3)
+
+print(my_set)  # Output will be {1, 2, 4, 5}
+
+# Attempt to remove an element that doesn't exist
+my_set.discard(6)
+
+print(my_set)  # Output will still be {1, 2, 4, 5}
+
+
+# %%
+#32. Compare two sets.
+set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+is_equal = set1 == set2
+print("Are the sets equal?", is_equal)  # Output: False
+
+
+# %%
+#33. Create a set from a string.
+my_string = "hello"
+my_set = set()
+
+for char in my_string:
+    my_set.add(char)
+
+print(my_set)
+
+
+# %%
+#34. Convert a set of strings to a set of integers.
+# Original set of strings
+string_set = {"1", "2", "3", "4", "5"}
+
+# Create a set of integers
+integer_set = set()
+
+for item in string_set:
+    try:
+        integer_item = int(item)
+        integer_set.add(integer_item)
+    except ValueError:
+        # Handle the case where an item cannot be converted to an integer
+        print(f"Unable to convert '{item}' to an integer")
+
+print(integer_set)
+
+
+# %%
+#35. Convert a set of integers to a set of strings.
+# Original set of integers
+integer_set = {1, 2, 3, 4, 5}
+
+# Create a set of strings
+string_set = set()
+
+for item in integer_set:
+    string_item = str(item)
+    string_set.add(string_item)
+
+print(string_set)
+
+
+# %%
+#36. Create a set from a tuple.
+# Create a tuple
+my_tuple = (1, 2, 3, 4, 5)
+
+# Convert the tuple to a set
+my_set = set(my_tuple)
+
+print(my_set)
+
+
+# %%
+#37. Convert a set to a tuple.
+# Create a set
+my_set = {1, 2, 3, 4, 5}
+
+# Convert the set to a tuple
+my_tuple = tuple(my_set)
+
+print(my_tuple)
+
+
+# %%
+#38. Find the maximum value in a set.
+# Create a set
+my_set = {5, 3, 8, 2, 9, 1}
+
+# Find the maximum value in the set
+max_value = max(my_set)
+
+print("Maximum value:", max_value)
+
+
+# %%
+#39. Find the minimum value in a set.
+# Create a set
+my_set = {5, 3, 8, 2, 9, 1}
+
+# Find the minimum value in the set
+max_value = min(my_set)
+
+print("Minimum value:", max_value)
+
+
+# %%
+#40. Create a set from user input.
+set1 = set(input("Enter the set"))
+print("Given set = ",set1)
+
+# %%
+#41. Check if the intersection of two sets is empty.
+set1= set(input("Enter the set1 "))
+set2 = set(input("Enter the set2"))
+
+
+# %%
+#42. Create a set of the first 5 Fibonacci numbers.
+n1=0
+n2=1
+count = 0
+set1 = set()
+for i in range(1,11):
+        nth = n1+n2
+        n1 = n2 
+        n2 = nth 
+        count+=1
+        set1.add(n1)
+print(set1)
+
+
+# %%
+#43. Remove duplicates from a list using sets.
+set1 = set(input("Enter the set 1 "))
+set2 = set(input("Enter the set 2"))
+set3 = set()
+for i in set1:
+    set3.add(i)
+for j in set2:
+    set3.add(j)
+print(set3)
+
+# %%
+#44. Check if two sets have the same elements, regardless of their count.
+set1 = set(input("Enter the set1"))
+set2 = set(input("Enter the set 2 "))
+count = 0 
+for i in set1 :
+    if i in set2 :
+        count+=1
+print(f"the both set have have {count} elements common  ")
+
+# %%
+#45. Create a set of the first `n` powers of 2.
+n = int(input("Enter the number of term upto whch you want the power of 2 "))
+pro = 1
+for i in range(1,n+1):
+    pro = i**2
+    print(f"{i}^2 = {pro}")
+
+
+# %%
+#46. Find the common elements between a set and a list.
+set1 = set(input("Enter the elements in the set"))
+lis = list(input("Enter the elements in the list "))
+list1 = []
+for i in set1:
+    if i in lis :
+        list1.append(i)
+print(f"the common elements in the set and the list are {list1}")
+
+# %%
+#47. Create a set of the first `n` triangular numbers.
+def generate_triangular_numbers(n):
+    triangular_numbers = set()
+    for i in range(1, n + 1):
+        triangular_number = i * (i + 1) // 2
+        triangular_numbers.add(triangular_number)
+    return triangular_numbers
+
+n = 10  # You can replace this with any value of n you want
+triangular_numbers_set = generate_triangular_numbers(n)
+print(triangular_numbers_set)
+
+
+# %%
+#48. Check if a set contains another set as a subset.
+# Define two sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {2, 3}
+
+# Check if set2 is a subset of set1
+is_subset = set2.issubset(set1)
+
+# OR, you can use the <= operator
+# is_subset = set2 <= set1
+
+if is_subset:
+    print("set2 is a subset of set1")
+else:
+    print("set2 is not a subset of set1")
+
+
+# %%
+#49. Create a set of alternating 1s and 0s of length `n`.
+n = int(input("Enter the length of n"))
+count = 1
+for i in range(1,n+1):
+    if i%2==0:
+        print(f"0")
+    else:
+        print(f"1")
+
+
+# %%
+#50. Merge multiple sets into one.
+set1 = set(input("Enter set 1 "))
+set2 = set(input("Enter set 2"))
+set3 = set(input("Enter set 3"))
+set4 = set()
+for i in set1:
+    set4.add(i)
+for i in set2:
+    set4.add(i)
+for i in set3:
+    set4.add(i)
+print(f" the all three sets are merged together and they are {set4}")
+
+
+# %%
+
+
+
+
+
